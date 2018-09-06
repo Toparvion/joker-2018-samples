@@ -1,0 +1,3 @@
+rootProject.name = 'joker-2018-samples'
+include 'relax-binding'
+include 'enable-scheduling'

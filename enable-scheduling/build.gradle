@@ -1,0 +1,4 @@
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:${project['springBootVersion']}")
+    compile("org.springframework.boot:spring-boot-starter-actuator:${project['springBootVersion']}")
+}
