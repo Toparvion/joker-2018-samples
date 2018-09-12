@@ -8,11 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 @EnableAsync(/*proxyTargetClass = true*/)
-public class AsyncTaskRunner implements TaskRunner {
-  private static final Logger log = LoggerFactory.getLogger(AsyncTaskRunner.class);
+public class NotImplementingTaskRunner {
+  private static final Logger log = LoggerFactory.getLogger(NotImplementingTaskRunner.class);
 
   @Async
-  @Override
   public void runTask(Runnable task) {
     log.info("Running the task in thread '{}'...", Thread.currentThread().getName());
     task.run();

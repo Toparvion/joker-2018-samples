@@ -2,10 +2,10 @@ test {
     useJUnitPlatform()
 }
 dependencies {
-//    compile("org.springframework.boot:spring-boot-starter-web:${project['springBootVersion']}")
-    compile group: 'org.springframework.cloud',
-            name: 'spring-cloud-starter-netflix-eureka-server',
-            version: project['springCloudVersion']
+    compile("org.springframework.boot:spring-boot-starter-web:${project['springBootVersion']}")
+//    compile group: 'org.springframework.cloud',
+//            name: 'spring-cloud-starter-netflix-eureka-server',
+//            version: project['springCloudVersion']
 //    compile("org.springframework.cloud:spring-cloud-starter-config:${project['springCloudVersion']}")
 
     // To prevent 'NoSuchMethodError's during startup (due to absence of dep management)

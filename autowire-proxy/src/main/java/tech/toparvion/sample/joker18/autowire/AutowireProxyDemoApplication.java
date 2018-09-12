@@ -14,7 +14,7 @@ public class AutowireProxyDemoApplication implements ApplicationRunner {
   private static final Logger log = LoggerFactory.getLogger(AutowireProxyDemoApplication.class);
 
   @Autowired
-  private AsyncTaskRunner taskRunner;
+  private ImplementingTaskRunner taskRunner;
 
   public static void main(String[] args) {
     SpringApplication.run(AutowireProxyDemoApplication.class, args);
