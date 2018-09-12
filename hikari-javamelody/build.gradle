@@ -1,0 +1,16 @@
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:${project['springBootVersion']}")
+    compile("org.springframework.boot:spring-boot-starter-jdbc:${project['springBootVersion']}")
+
+    compile group: 'net.bull.javamelody', name: 'javamelody-spring-boot-starter', version: '1.72.0'
+    compile group: 'org.springframework.cloud',
+            name: 'spring-cloud-starter-netflix-eureka-client',
+            version: project['springCloudVersion']
+    runtime('com.h2database:h2:1.4.197')
+    // TODO uncomment the following line alongside with application.properties:11 to avoid the crash on startup
+//    runtime group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '8.5.29'
+    
+    // To prevent 'NoSuchMethodError: com.google.gson.GsonBuilder.setLenient()Lcom/google/gson/GsonBuilder;' at startup
+    runtime "com.google.code.gson:gson:2.8.2"
+
+}

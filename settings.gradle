@@ -1,3 +1,6 @@
 rootProject.name = 'joker-2018-samples'
 include 'relax-binding'
 include 'enable-scheduling'
+include 'autowire-proxy'
+include 'hikari-javamelody'
+
