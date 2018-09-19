@@ -2,7 +2,7 @@
 ## Relax Binding Sample
 ### Описание
 
-Этот пример демонстрирует различия в поведении relax binding в различных 
+Этот пример демонстрирует отличия в поведении relax binding в различных 
 версиях Spring Boot. В частности, показывает, что в версии 2.х первоисточником
 для сопоставления стали `get`-теры.
 
@@ -10,8 +10,7 @@
 Запуск примера производится через класс `RelaxBindingDemoApplication`.
 #### Ошибочное поведение
 
-1. Выставить версию Spring Boot `2.0.2.RELEASE` в файле 
-`relax-binding/gradle.properties`.
+1. Выставить версию Spring Boot `2.0.2.RELEASE` в файле `relax-binding/build.gradle`.
 2. Запустить пример. Приложение не должно запуститься из-за ошибки вида
 ```text
 Failed to bind properties under 'security' to tech.toparvion.sample.joker18.relax.SecurityProperties:
@@ -25,13 +24,12 @@ Failed to bind properties under 'security' to tech.toparvion.sample.joker18.rela
 #### Корректное поведение
 
 1. На выбор:  
-    a. Выставить версию Spring Boot `1.5.4.RELEASE` в файле 
-       `relax-binding/gradle.properties`.  
+    a. Выставить версию Spring Boot `1.5.4.RELEASE` в файле `relax-binding/build.gradle`.  
 _или_  
     b. Переименовать в классе `SecurityProperties` метод из 
     `getKeyStoreType` в `getKeystoreType`.
 2. Запустить пример. Приложение должно запуститься и тут же корректно 
 завершить свою работу, выведя в лог запись вида:
 ```text
-INFO 119696 --- [main] t.t.s.j.r.RelaxBindingDemoApplication    : keystore type: jks
+INFO t.t.s.j.r.RelaxBindingDemoApplication    : KEYSTORE TYPE IS: jks
 ```

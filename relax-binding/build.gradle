@@ -1,3 +1,7 @@
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter:${project['springBootVersion']}")
+	ext {
+//        springBootVersion = '1.5.4.RELEASE'
+        springBootVersion = '2.0.2.RELEASE'
+    }
+	compile("org.springframework.boot:spring-boot-starter:$springBootVersion")
 }
