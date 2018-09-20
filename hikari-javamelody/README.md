@@ -12,10 +12,10 @@
 Запуск примера производится через класс `HikariJavamelodyDemoApplication`.
 
 #### Ошибочное поведение
-1. Выставить в `gradle.properties` следующие версии фреймворков:
-```properties
-springBootVersion=2.0.4.RELEASE
-springCloudVersion=2.0.1.RELEASE
+1. Выставить в `build.gradle` следующие версии фреймворков:
+```groovy
+springBootVersion = '2.0.4.RELEASE'
+springCloudVersion = '2.0.1.RELEASE'
 ```
 2. Удалить/закомментировать в `build.gradle` строку:
 ```groovy
@@ -46,10 +46,10 @@ spring.datasource.type=org.apache.tomcat.jdbc.pool.DataSource
     http://localhost:8080/monitoring.
 
 ##### Способ 2 _(через понижение версий)_
-1. Выставить в `gradle.properties` следующие версии компонентов:
-```properties
-springBootVersion=1.5.14.RELEASE
-springCloudVersion=1.4.5.RELEASE
+1. Выставить в `build.gradle` следующие версии компонентов:
+```groovy
+springBootVersion = '1.5.14.RELEASE'
+springCloudVersion = '1.4.5.RELEASE'
 ```
 2. Удалить/закомментировать в `build.gradle` строку:
 ```groovy
