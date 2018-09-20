@@ -30,9 +30,9 @@ Spring Boot Actuator. Один из классов этого стартера �
 #### Ошибочное поведение
 
 1. Выставить версию Spring Boot `2.0.2.RELEASE` в файле 
-   `enable-scheduling/gradle.properties`.
+   `enable-scheduling/build.gradle`.
 2. Запустить пример. Приложение должно корректно запуститься, но в 
-логах не должно быть периодических записей вида
+логах **не** должно быть периодических записей вида
 ```text
 INFO 108804 --- [pool-1-thread-1] .t.s.j.s.EnableSchedulingDemoApplication : Another 3000 milliseconds have passed...
 ```
@@ -41,7 +41,7 @@ INFO 108804 --- [pool-1-thread-1] .t.s.j.s.EnableSchedulingDemoApplication : Ano
 
 1. На выбор:  
     a. Выставить версию Spring Boot `1.5.4.RELEASE` в файле 
-          `enable-scheduling/gradle.properties`.  
+          `enable-scheduling/build.gradle`.
 _или_  
     b. Раскомментировать аннотацию `@EnableScheduling` на классе 
 `EnableSchedulingDemoApplication`.
