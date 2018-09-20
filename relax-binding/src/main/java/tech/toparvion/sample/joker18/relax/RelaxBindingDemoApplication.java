@@ -8,8 +8,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
 @SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
+@SpringBootApplication
 public class RelaxBindingDemoApplication implements ApplicationRunner {
   private static final Logger log = LoggerFactory.getLogger(RelaxBindingDemoApplication.class);
 
@@ -22,6 +22,6 @@ public class RelaxBindingDemoApplication implements ApplicationRunner {
 
   @Override
   public void run(ApplicationArguments args) {
-    log.info("keystore type: {}", securityProperties.getKeyStoreType());
+    log.info("KEYSTORE TYPE IS: {}", securityProperties.getKeyStoreType());
   }
 }
