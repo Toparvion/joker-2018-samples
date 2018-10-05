@@ -1,0 +1,7 @@
+dependencies {
+    ext {
+//        springBootVersion = '1.5.14.RELEASE'
+        springBootVersion = '2.0.4.RELEASE'
+    }
+    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+}

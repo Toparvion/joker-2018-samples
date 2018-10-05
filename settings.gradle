@@ -4,4 +4,5 @@ include 'enable-scheduling'
 include 'autowire-proxy'
 include 'hikari-javamelody'
 include 'jmx-resource'
+include 'content-type'
 
