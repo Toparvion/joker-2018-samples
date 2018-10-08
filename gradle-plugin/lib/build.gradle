@@ -1,0 +1,7 @@
+// Uncomment the following lines to prevent the build from failure 
+//jar {
+//    enabled = true
+//}
+//bootJar {
+//    enabled = false
+//}

@@ -1,0 +1,3 @@
+rootProject.name = 'gradle-plugin-sample'
+include 'app1'  // depends on lib and involves Spring Boot starter
+include 'lib'   // has no dependencies

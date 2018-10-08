@@ -1,0 +1,30 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: "${springBootVersion}"
+    }
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+    apply plugin: 'java'
+// Uncomment the following 2 lines to prevent the build from failure    
+//}
+//configure(subprojects.findAll { it.name != 'lib' }) {
+    apply plugin: 'org.springframework.boot'
+    jar {
+        archiveName = "${project.name}.jar"
+        manifest {
+            attributes("Implementation-Title": "Joker 2018 Samples",
+                    "Implementation-Version": "0.0.1-SNAPSHOT",
+                    "Implementation-Vendor": "Vladimir Plizga @Toparvion")
+        }
+    }
+}
