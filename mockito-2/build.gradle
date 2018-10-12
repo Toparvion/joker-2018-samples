@@ -1,0 +1,7 @@
+dependencies {
+	ext {
+//        springBootVersion = '1.5.4.RELEASE'
+        springBootVersion = '2.0.2.RELEASE'
+    }
+	testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+}

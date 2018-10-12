@@ -5,4 +5,5 @@ include 'autowire-proxy'
 include 'hikari-javamelody'
 include 'jmx-resource'
 include 'content-type'
+include 'mockito-2'
 
