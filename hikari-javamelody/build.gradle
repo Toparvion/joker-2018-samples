@@ -7,10 +7,12 @@ dependencies {
         springCloudVersion='2.0.1.RELEASE'
     }
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
-    compile("org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion")
-    compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:$springCloudVersion")
 
-    runtime('net.bull.javamelody:javamelody-spring-boot-starter:1.72.0')
+    runtime("org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion")
+    runtime group: "org.springframework.cloud", 
+            name: "spring-cloud-starter-netflix-eureka-client",
+            version: springCloudVersion
+    runtime("net.bull.javamelody:javamelody-spring-boot-starter:1.72.0")
     runtime('com.h2database:h2:1.4.197')
     // uncomment the following line alongside with application.properties:11 to avoid the crash on startup
     // runtime group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '8.5.29'
