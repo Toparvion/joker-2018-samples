@@ -32,7 +32,7 @@ public class ContentTypeDemoApplication {
    * between these facilities is defined by Spring Framework version and can be controlled with
    * {@code spring.mvc.contentnegotiation.favor-path-extension} parameter.
    * @param fileName the name of the file to generate and download
-   * @return generated file (delibirately without {@code Content-Disposition} header to avoid actual downloading)
+   * @return generated file (deliberately without {@code Content-Disposition} header to avoid actual downloading)
    */
   @GetMapping(value = "/download/{fileName:.+}",
               produces = {TEXT_HTML_VALUE, APPLICATION_JSON_UTF8_VALUE, TEXT_PLAIN_VALUE})

@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Component;
 
 @Component
-@ManagedResource(description = "A bussines resource that can be controlled over JMX")
+@ManagedResource(description = "A business resource that can be controlled over JMX")
 @EnableAsync
 public class MyJmxResource {
 
