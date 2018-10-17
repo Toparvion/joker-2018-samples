@@ -1,9 +1,9 @@
 dependencies {
     ext {
-//        springBootVersion = '1.5.4.RELEASE'
-         springBootVersion = '2.0.2.RELEASE'
+//        springBootVersion = '1.5.14.RELEASE'
+         springBootVersion = '2.0.4.RELEASE'
     }
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
     compile("org.springframework.boot:spring-boot-starter-actuator:$springBootVersion")
-    // +100500 зависимостей в случае настоящего приложения
+    // +100500 dependencies in case of real application
 }

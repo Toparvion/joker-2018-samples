@@ -4,12 +4,11 @@ import org.junit.Test;
 
 import javax.swing.*;
 import java.net.SocketTimeoutException;
-import java.util.ArrayList;
 
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
-public class DemoTest {
+public class MockitoTest {
 
   @Test(expected = SocketTimeoutException.class)
   public void tetsCheckedException() {
@@ -22,7 +21,7 @@ public class DemoTest {
   }
 
   @Test
-   public void testAnyMatcher() {
+   public void testAnyNullMatcher() {
      JButton buttonMock = mock(JButton.class);
      buttonMock.setName(null);
      verify(buttonMock).setName(anyString());
@@ -37,12 +36,4 @@ public class DemoTest {
     verify(myServiceMock).setTarget(anyString());
   }
 
-  @Test
-  public void testAnyMatcher2() {
-    ArrayList listMock = mock(ArrayList.class);
-
-    listMock.add(new JButton());
-
-    verify(listMock).add(anyList());
-  }
 }
